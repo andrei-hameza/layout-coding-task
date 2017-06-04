@@ -1,0 +1,31 @@
+{
+  "name": "layout-coding-task",
+  "description": "Just a layout coding task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "dependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrei-hameza/layout-coding-task.git"
+  },
+  "author": "Andrei Hameza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrei-hameza/layout-coding-task/issues"
+  },
+  "homepage": "https://github.com/andrei-hameza/layout-coding-task#readme"
+}
