@@ -33,7 +33,7 @@ gulp.task('sass', function () {
         message: err.message
       }
     }))
-    .pipe(autoprefixer(['last 5 versions']))
+    .pipe(autoprefixer(['last 2 versions']))
     .pipe(sourcemaps.write('./stylemaps'))
     .pipe(gulp.dest('public/assets/stylesheets'))
     .pipe(browserSync.reload({stream: true}))
@@ -53,7 +53,7 @@ gulp.task('pug', function(){
       }
     }))
     .pipe(gulp.dest('public/'))
-    // .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}))
 });
 
 // Copy Fonts
@@ -66,29 +66,20 @@ gulp.task('copyFonts', function() {
 // Copy Images
 gulp.task('copyImages', function() {
     gulp
-      .src(['./src/resources/images/**/*'])
+      .src(['./src/assets/images/**/*'])
       .pipe(gulp.dest('public/assets/images/'));
 });
-
-// Copy content pictures
-gulp.task('copyContentPics', function() {
-    gulp
-      .src('./src/resources/content/**/*')
-      .pipe(gulp.dest('public/content/'));
-});
-
 
 // Watch taskes
 gulp.task('watch', ['sass', 'browser-sync'], function() {
   gulp.watch(['src/assets/stylesheets/*.scss',
-              'src/assets/stylesheets/**/*.scss',
-              'src/templates/**/*.scss'], ['sass']);
+              'src/assets/stylesheets/**/*.scss'], ['sass']);
   gulp.watch(['src/pages/*.pug',
               'src/pages/**/*.pug',
+              'src/helpers/**/*.pug',
               'src/partials/**/*.pug'], ['pug']);
   gulp.watch(['src/assets/fonts/*.*', 'src/assets/fonts/**/*.*'], ['copyFonts']);
-  gulp.watch(['src/resources/images/*.*', 'src/resources/images/**/*.*'], ['copyImages']);
-  gulp.watch(['src/resources/content/*.*', 'src/resources/content/**/*.*'], ['copyContentPics']);
+  gulp.watch(['src/assets/images/*.*', 'src/assets/images/**/*.*'], ['copyImages']);
 });
 
 
@@ -97,7 +88,6 @@ gulp.task('default', function(callback) {
                       'pug',
                       'copyFonts',
                       'copyImages',
-                      'copyContentPics',
                       'watch'],
                       callback);
 });
