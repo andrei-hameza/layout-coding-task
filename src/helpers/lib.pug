@@ -1,0 +1,40 @@
+-
+  var psystems = {}
+    psystems.filspay = { image: 'assets/images/pay-systems/icon-ps-fp.png', title: 'Filspay' }
+    psystems.cashu = { image: 'assets/images/pay-systems/icon-ps-cash.png', title: 'CASHU'}
+    psystems.perfectmoney = { image: 'assets/images/pay-systems/icon-ps-pm.png', title: 'Perfect Money'}
+    psystems.webmoney = { image: 'assets/images/pay-systems/icon-ps-wm.png', title: 'WebMoney'}
+    psystems.neteller = { image: 'assets/images/pay-systems/icon-ps-net.png', title: 'NETELLER'}
+    psystems.visamastercard = { image: 'assets/images/pay-systems/icon-ps-visa.png', title: 'Visa MasterCard'}
+    psystems.payweb = { image: 'assets/images/pay-systems/icon-ps-pw.png', title: 'PayWeb'}
+    psystems.ukash = { image: 'assets/images/pay-systems/icon-ps-uk.png', title: 'Ukash'}    
+
+  var social = {}
+    social.vk = { url: 'https://vk.com', image: 'assets/images/social/vk', title: '' }
+    social.ok = { url: 'https://ok.ru', image: 'assets/images/social/ok', title: '' }
+    social.twitter = { url: 'https://twitter.com', image: 'assets/images/social/twitter', title: '' }
+    social.facebook = { url: 'https://facebook.com', image: 'assets/images/social/facebook', title: '' }
+    social.youtube = { url: 'https://youtube.com', image: 'assets/images/social/youtube', title: '' }
+    social.linkedin = { url: 'https://linkedin.com', image: 'assets/images/social/linkedIn', title: '' }
+    social.ksin = { url: 'https://ksin.com', image: 'assets/images/social/ksin', title: '' }
+    social.instagram = { url: 'https://instagram.com', image: 'assets/images/social/instagram', title: '' }
+    social.google = { url: 'https://plus.google.com/', image: 'assets/images/social/google', title: '' }
+  
+  var certificates = {}
+    certificates.sysec = 'assets/images/footer/sysec.png'
+    certificates.beliz = 'assets/images/footer/beliz.png'
+    certificates.nqa = 'assets/images/footer/icon-nqa.png'
+    certificates.sm = 'assets/images/footer/icon-sm.png'
+    certificates.cascade = 'assets/images/footer/cascade.png'
+    
+  var menu_about_compamy = [ 'О компании', 'Общие сведения', 'Почему EXNESS?', 'Менеджмент', 'Регуляция', 'Служба поддержки клиентов' ]
+  var menu_trade = [ 'Торговля', 'Открыть торговый счет', 'Пополнение и снятия средств', 'Правила предоставления кредитного плеча' ]
+  var menu_tools_first_part = [ 'Инструменты', 'MetaTrader4', 'MetaTrader5', 'Webtrader', 'Мобильные платформы' ]
+  var menu_tools_second_part = [ 'Экономический календарь', 'Аналитика', 'Калькулятор трейдера и конвертер валют', 'Загрузки' ]
+  var menu_others = [ 'Партнерство', 'Библиотека', 'FAQ' ]
+  var menu_main = [menu_about_compamy[0], menu_trade[0], menu_tools_first_part[0]].concat(menu_others)
+    
+  var main_menu_item = function (item) {
+    return menu_main.indexOf(item) >= 0 ? ' footer-menu__item--main' : ''
+  }
+  
