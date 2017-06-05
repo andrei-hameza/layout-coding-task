@@ -1,0 +1,43 @@
+include ../helpers/lib.pug
+
+footer.page-footer
+  .page-footer__social
+    ul.social-links
+      each value, index in social
+        li.social-links__item
+          a.social-links__link(href=value.url title=value.title)
+            img.social-links__logo(src=value.image + '@2x.png' alt=value.title)
+  .page-footer__navigation
+    ul.footer-menu
+      each value, index in menu_about_compamy
+        li(class='footer-menu__item' + main_menu_item(value))
+          a.footer-menu__link(href='#') #{value}
+    ul.footer-menu
+      each value in menu_trade
+        li(class='footer-menu__item' + main_menu_item(value))
+          a.footer-menu__link(href='#') #{value}
+    ul.footer-menu
+      each value in menu_tools_first_part
+        li(class='footer-menu__item' + main_menu_item(value))
+          a.footer-menu__link(href='#') #{value}
+    ul.footer-menu.footer-menu--pull-down
+      each value in menu_tools_second_part
+        li(class='footer-menu__item' + main_menu_item(value))
+          a.footer-menu__link(href='#') #{value}
+    ul.footer-menu
+      each value in menu_others
+        li(class='footer-menu__item' + main_menu_item(value))
+          a.footer-menu__link(href='#') #{value}
+  .page-footer__info
+    .page-footer__copyright.copyright
+      p(class='copyright__text').
+        Сайт www.exness.com находится в ведении компании Exness Limited, (регистрационный номер 21927 (IBC 2014). Exness Limited — это внешнеэкономическая компания Сен-Винсента и Гренадин. Компания Exness (Cy) Ltd входит в группу компаний Exness; уполномочена и подконтрольна CySEC (Комиссии по ценным бумагам и биржам острова Кипр), лицензионный номер 178/12. Компания Exness (Cy) Ltd управляет сайтом www.exness.eu. 
+      p(class='copyright__text').
+        Информация на этом сайте может быть скопирована только с письменного разрешения Exness.
+        СFD являются продуктами маржинальной торговли, соответственно, убытки, понесенные в процессе торговли CFD, могут превысить начальный инвестированный капитал. Торговля CFD сопряжена с высоким уровнем риска и может не подходить для всех инвесторов. Инвестиционная стоимость может, как увеличиваться, так и уменьшаться, и инвесторы могут потерять все свои вложенные средства. Компания ни при каких обстоятельствах не несет ответственности перед физическими или юридическими лицами за любые убытки или ущерб целиком или частично вызванные, являющиеся результатом, или имеющие отношение к любым операциям, связанным с CFD. 
+    .page-footer__certificates
+      ul.certificates-links
+        each value, index in certificates
+          li.certificates-links__item
+            a.certificates-links__link
+              img.certificates-links__image(src=value alt=index)
