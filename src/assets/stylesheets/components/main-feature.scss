@@ -1,0 +1,88 @@
+.main-feature {
+  background: $tangerine-yellow;
+
+  &__layout {
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    display: none;
+  }
+
+  &__logo {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  &__image {
+    width: 55%;
+  }
+
+  &__annotation {
+    display: none;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-family: $font-regular;
+    color: $black;
+    line-height: 1.46;
+    text-align: center;
+  }
+
+  @include mq($from: tablet) {
+
+    &__image {
+      width: auto;
+      max-width: 100%;
+      font-size: 22px;
+    }
+  }
+
+  @include mq($from: desktop) {
+
+    &__layout {
+      display: flex;
+      align-items: center;
+      max-width: $wide-width;
+      padding: 30px 56px;
+      position: relative;
+    }
+
+    &__transfer-fee {
+      flex: 1;
+      text-align: center;
+    }
+
+    &__full-description {
+      flex: 1;
+    }
+
+    &__heading {
+      display: block;
+      position: absolute;
+      left: 50px;
+      top: 50%;
+      transform: rotate(-90deg) translateX(-50%);
+      transform-origin: 0 0 0;
+      font-size: 20px;
+      font-family: $font-bold;
+      line-height: 1.6;
+    }
+
+    &__annotation {
+      display: block;
+      font-size: 20px;
+      font-family: $font-bold;
+      line-height: 1.6;
+    }
+
+    &__text {
+      font-size: 40px;
+      line-height: 1.2;
+      text-align: left;
+    }
+  }
+}
