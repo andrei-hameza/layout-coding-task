@@ -1,0 +1,12 @@
+@import './fonts';
+@import './variables';
+@import './normalize';
+@import './components/index';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
