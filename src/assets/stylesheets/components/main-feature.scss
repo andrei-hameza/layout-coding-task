@@ -46,6 +46,7 @@
     &__layout {
       display: flex;
       align-items: center;
+      width: auto;
       max-width: $wide-width;
       padding: 30px 56px;
       position: relative;

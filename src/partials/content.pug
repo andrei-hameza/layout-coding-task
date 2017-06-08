@@ -9,17 +9,22 @@ include ../helpers/lib.pug
           img.main-feature__image(src='assets/images/zero.svg' alt='0% Комиссия за переводы')
         .main-feature__annotation Комиссия за переводы
       .main-feature__full-description
-        p.main-feature__text Выводя со счета форекс-брокера EXNESS $1000, вы получаете на свой кошелек или банковский счет ровно 1000$
+        p.main-feature__text Выводя со счета форекс-брокера EXNESS $1000, вы получаете на свой кошелек или банковский счёт ровно 1000$
   .payment-systems-info
     h3.payment-systems-info__heading Доступные платежные системы
-    ul.payment-systems.payment-systems-info__list
-      each value in psystems
-        li.payment-systems__item
-          a.payment-systems__link(href=value.url)
-            img.payment-systems__logo(src=value.image alt=value.title)
+    .payment-systems-info__content
+      a.payment-systems-info__prev-link(href='#')
+      a.payment-systems-info__next-link(href='#')
+      ul.payment-systems.payment-systems-info__list
+        each value in psystems
+          li.payment-systems__item
+            a.payment-systems__link(href='#')
+              img.payment-systems__logo(src=value.image alt=value.title)
   .open-account
     form.form.open-account__form
       input.form__input(type='tel' placeholder='Мобильный телефон')
       input.form__input(type='email' placeholder='Адрес электронной почты')
-      button.form__button(type='button') Открыть счет
+      button.button.form__button(type='button') Открыть счет
+    .open-account__remark
+      p.open-account__text По некоторым способам <a class='open-account__link' href="#">ввода/вывода средств действуют</a> ограничения по размеру минимальной суммы операции операции для осуществления транзакции без комиссии.
       

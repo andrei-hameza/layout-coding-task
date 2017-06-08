@@ -1,0 +1,79 @@
+.open-account {
+  padding: 0 25px;
+
+  &__form {
+    padding: 20px 0 15px;
+  }
+
+  &__remark {
+    margin: 10px auto 75px;
+  }
+
+  &__text {
+    font-size: 13px;
+    font-family: $font-light;
+    line-height: 1.24;
+    color: $black;
+    text-align: center;
+  }
+
+  &__link {
+    color: $curious-blue;
+  }
+
+  @include mq($from: tablet) {
+    max-width: $wide-width;
+    margin: 0 auto;
+
+    &__remark {
+      width: 50%;
+      margin-top: 35px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.43;
+    }
+  }
+}
+
+.form {
+
+  &__input {
+    display: none;
+  }
+
+  &__button {
+    margin: 0 auto;
+    text-align: left;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  @include mq($from: tablet) {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+
+    &__input {
+      font-size: 14px;
+      font-family: $font-regular;
+      color: $nero;
+      display: block;
+      flex-basis: 328px;
+      padding-left: 18px;
+      margin: 0 8px;
+      height: 72px;
+      line-height: 72px;
+      border-radius: 0;
+      border: 1px solid #DEDEDE;
+      background: $white;
+    }
+
+    &__button {
+      height: 72px;
+      margin: 0 8px;
+    }
+  }
+}
